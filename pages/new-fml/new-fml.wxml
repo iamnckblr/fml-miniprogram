@@ -1,0 +1,20 @@
+<!--pages/new-fml/new-fml.wxml-->
+<view class="header">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image><text>Submit your FML</text>
+    </block>
+
+
+  <!--<image src="{{userInfo.avatarUrl}}"></image><text>Submit your FML</text>-->
+</view> 
+<form bindsubmit="bindFormSubmit">
+  <view>
+   <input name="author" type="text" disabled="true" value="{{userInfo.nickName}}" />
+  </view>
+  <view>
+   <textarea name="message" max-length="-1" placeholder="Today ... FML"></textarea>
+  </view>
+  <!-- Refer to the Github repository above if you want the complete form -->
+  <button type="primary" form-type="submit">Send</button>
+ </form>

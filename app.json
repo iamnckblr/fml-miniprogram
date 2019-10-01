@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/new-fml/new-fml"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -9,5 +10,25 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "backgroundColor": "#32AAE1",
+    "borderStyle": "black",
+    "selectedColor": "#FFF",
+    "color": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/random.png",
+        "selectedIconPath": "image/selected-random.png",
+        "text": "Random"
+      },
+      {
+        "pagePath": "pages/new-fml/new-fml",
+        "iconPath": "image/submit.png",
+        "selectedIconPath": "image/selected-submit.png",
+        "text": "New FML"
+      }
+    ]
+  }
 }
